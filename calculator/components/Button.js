@@ -1,5 +1,6 @@
 import { Pressable, StyleSheet, Text, View, Image, Vibration, Platform } from 'react-native';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
+import * as Haptics from 'expo-haptics';
 
 export default function Button({ text, pressHandler, type }) {
     const ONE_SECOND_IN_MS = 1000;
@@ -17,24 +18,24 @@ export default function Button({ text, pressHandler, type }) {
 
 
 
-    if (text == "back") {
-        return <Pressable onPress={() => {pressHandler();Vibration.vibrate(10 * ONE_SECOND_IN_MS)}} style={[styles.button, {backgroundColor: "#2F2F39"}]}><Image source={require("../assets/delete-left-white.png")} style={[{width: 30, height: 30, color: "#fff"}]} /></Pressable>
+    if (text === "back") {
+        return <Pressable onPress={() => {pressHandler();Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)}} style={[styles.button, {backgroundColor: "#2F2F39"}]}><Image source={require("../assets/delete-left-white.png")} style={[{width: 30, height: 30, color: "#fff"}]} /></Pressable>
     }
 
 
-    if (type == "t1") {
+    if (type === "t1") {
         return (
-            <Pressable onPress={() => {pressHandler();Vibration.vibrate(10 * ONE_SECOND_IN_MS)}} style={[styles.button]}><Text style={[styles.text]}>{text}</Text></Pressable>
+            <Pressable onPress={() => {pressHandler();Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)}} style={[styles.button]}><Text style={[styles.text]}>{text}</Text></Pressable>
         );
     }
 
-    if (type == "t2") {
-        return <Pressable onPress={() => {pressHandler();Vibration.vibrate(10 * ONE_SECOND_IN_MS)}} style={[styles.button, {backgroundColor: "#4D5CFB"}]}><Text style={[styles.text]}>{text}</Text></Pressable>
+    if (type === "t2") {
+        return <Pressable onPress={() => {pressHandler();Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)}} style={[styles.button, {backgroundColor: "#4D5CFB"}]}><Text style={[styles.text]}>{text}</Text></Pressable>
     }
 
-    if (type == "t3") {
+    if (type === "t3") {
         return (
-            <Pressable onPress={() => {pressHandler();Vibration.vibrate(10 * ONE_SECOND_IN_MS)}} style={[styles.button, {backgroundColor: "#2F2F39"}]}><Text style={[styles.text]}>{text}</Text></Pressable>
+            <Pressable onPress={() => {pressHandler();Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)}} style={[styles.button, {backgroundColor: "#2F2F39"}]}><Text style={[styles.text]}>{text}</Text></Pressable>
         );
     }
 }
