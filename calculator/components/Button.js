@@ -40,34 +40,6 @@ export default function Button({ text, pressHandler, type }) {
       </Pressable>
     );
   }
-
-  if (type === "t2") {
-    return (
-      <Pressable
-        onPress={() => {
-          pressHandler();
-          Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-        }}
-        style={[styles.button, styles.button2]}
-      >
-        <Text style={[styles.text]}>{text}</Text>
-      </Pressable>
-    );
-  }
-
-  if (type === "t3") {
-    return (
-      <Pressable
-        onPress={() => {
-          pressHandler();
-          Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-        }}
-        style={[styles.button, styles.button3]}
-      >
-        <Text style={[styles.text]}>{text}</Text>
-      </Pressable>
-    );
-  }
 }
 
 const styles = StyleSheet.create({
