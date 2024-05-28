@@ -10,34 +10,8 @@ import { ScrollView } from "react-native";
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={[styles.textHolder]}>
-        <Text style={[styles.lastText]}>Hier das Ergebnis der letzen Rechnung</Text>
-        <ScrollView style={[styles.sideScroll]} horizontal>
-          <Text style={[styles.resultText]} numberOfLines={1}>
-            Hier die aktuelle Rechnung
-          </Text>
-        </ScrollView>
-      </View>
 
-      <View style={[styles.gridContainer]}>
-        <View style={[styles.row]}>
-          <Button type="t1" text="C" pressHandler={() => setDisplay("")} />
-          <Button
-            type="t1"
-            text="+ / -"
-            pressHandler={() => {
-              display.startsWith("-")
-                ? setDisplay(display.slice(1))
-                : setDisplay("-" + display);
-            }}
-          />
-          <Button
-            type="t1"
-            text="%"
-            pressHandler={() => setDisplay(display + "%")}
-          />
-         
-        </View>
+
         
       </View>
     </View>
