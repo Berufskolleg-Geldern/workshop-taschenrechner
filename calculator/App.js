@@ -36,11 +36,7 @@ export default function App() {
             text="%"
             pressHandler={() => setDisplay(display + "%")}
           />
-          <Button
-            type="t2"
-            text="/"
-            pressHandler={() => setDisplay(display + "/")}
-          />
+         
         </View>
         
       </View>
