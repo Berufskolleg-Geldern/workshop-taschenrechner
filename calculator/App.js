@@ -8,6 +8,15 @@ import { ScrollView } from "react-native";
  * @returns {JSX.Element} The rendered component.
  */
 export default function App() {
+
+  const equalsHandler = () => {
+    try {
+      setLast(display);
+      setDisplay(eval(display.replace("%", " * 0.01")));
+    } catch {
+      setDisplay(display);
+    }
+  };
   return (
     <View style={styles.container}>
       <View style={[styles.textHolder]}>
