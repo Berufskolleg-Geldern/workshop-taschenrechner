@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "eas-cli": "^9.1.0",
     "expo": "^51.0.8",
     "expo-haptics": "~13.0.1",
     "expo-status-bar": "~1.12.1",

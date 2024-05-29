@@ -8,6 +8,9 @@ import { ScrollView } from "react-native";
  * @returns {JSX.Element} The rendered component.
  */
 export default function App() {
+  const [display, setDisplay] = React.useState("0");
+  const [last, setLast] = React.useState("");
+
   const equalsHandler = () => {
     try {
       setLast(display);
@@ -18,10 +21,65 @@ export default function App() {
   };
   return (
     <View style={styles.container}>
+      <View style={[styles.textHolder]}>
+        <Text style={[styles.lastText]}>{last}</Text>
+        <ScrollView style={[styles.sideScroll]} horizontal>
+          <Text style={[styles.resultText]} numberOfLines={1}>
+            {display}
+          </Text>
+        </ScrollView>
+      </View>
 
 
-        
+      <View style={[styles.gridContainer]}>
+        <View style={[styles.row]}>
+          <Button type="t1" text="C" pressHandler={() => setDisplay("")} />
+          <Button type="t1" text="+/-" pressHandler={() => setDisplay(display + "+/-")} />
+          <Button type="t1" text="%" pressHandler={() => setDisplay(display + "%")} />
+          <Button type="t2" text="/" pressHandler={() => setDisplay(display + "/")} />
+
+
+
+        </View>
+        <View style={[styles.row]}>
+          <Button type="t3" text="7" pressHandler={() => setDisplay(display + "7")} />
+          <Button type="t3" text="8" pressHandler={() => setDisplay(display + "8")} />
+          <Button type="t3" text="9" pressHandler={() => setDisplay(display + "9")} />
+          <Button type="t2" text="*" pressHandler={() => setDisplay(display + "*")} />
+
+
+
+        </View>
+        <View style={[styles.row]}>
+          <Button type="t3" text="4" pressHandler={() => setDisplay(display + "4")} />
+          <Button type="t3" text="5" pressHandler={() => setDisplay(display + "5")} />
+          <Button type="t3" text="6" pressHandler={() => setDisplay(display + "6")} />
+          <Button type="t2" text="-" pressHandler={() => setDisplay(display + "-")} />
+
+
+
+        </View>
+        <View style={[styles.row]}>
+          <Button type="t3" text="1" pressHandler={() => setDisplay(display + "1")} />
+          <Button type="t3" text="2" pressHandler={() => setDisplay(display + "2")} />
+          <Button type="t3" text="3" pressHandler={() => setDisplay(display + "3")} />
+          <Button type="t2" text="+" pressHandler={() => setDisplay(display + "+")} />
+
+
+
+        </View>
+        <View style={[styles.row]}>
+          <Button type="t3" text="." pressHandler={() => setDisplay(display + ".")} />
+          <Button type="t3" text="0" pressHandler={() => setDisplay(display + "0")} />
+          <Button type="t3" text="back" pressHandler={() => setDisplay(display.substring(0, display.length - 1))}  />
+          <Button type="t2" text="=" pressHandler={() => equalsHandler()} />
+        </View>
+         
+
+      </View>
     </View>
+
+
   );
 }
 
