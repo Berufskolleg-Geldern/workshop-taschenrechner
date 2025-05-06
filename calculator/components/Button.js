@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     width: 75,
     height: 75,
     padding: 10,
-    backgroundColor: "#4E505F",
+    backgroundColor: "#FF0000",
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
@@ -89,10 +89,10 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
   button2: {
-    backgroundColor: "#4D5CFB",
+    backgroundColor: "#FFFF00",
   },
   button3: {
-    backgroundColor: "#2F2F39",
+    backgroundColor: "#FF0000",
   },
   imageStyle: {
     width: 30,
