@@ -89,10 +89,10 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
   button2: {
-    backgroundColor: "#4D5CFB",
+    backgroundColor: "#FF0000",
   },
   button3: {
-    backgroundColor: "#2F2F39",
+    backgroundColor: "#FF00FF",
   },
   imageStyle: {
     width: 30,
