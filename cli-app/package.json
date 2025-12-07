@@ -1,0 +1,23 @@
+{
+  "name": "taschenrechner-providerserv",
+  "version": "1.0.0",
+  "description": "A CLI app to extract button data from calculator App.js",
+  "main": "index.js",
+  "bin": {
+    "taschenrechner-providerserv": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "calculator",
+    "cli",
+    "provider"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "acorn": "^8.11.3",
+    "acorn-jsx": "^5.3.2"
+  }
+}
